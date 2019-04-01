@@ -4,10 +4,11 @@
   "description": "https://patryk-stanek.github.io/react__contacts/",
   "main": "index.js",
   "dependencies": {
-    "babel-standalone": "^6.26.0",
     "npm": "^6.5.0"
   },
   "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
     "globstar": "^1.0.0",
@@ -33,7 +34,8 @@
     "watch:browsersync": "browser-sync --watch",
     "watch:sassprefixer": "onchange sass -- npm-run-all sass -p autoprefixer",
     "sass": "node-sass --output-style expanded --source-map true -o css sass",
-    "autoprefixer": "autoprefixer-cli -o css/style.css css/style.css"
+    "autoprefixer": "autoprefixer-cli -o css/style.css css/style.css",
+    "babel": "babel components/Contact.js -d js"
   },
   "repository": {
     "type": "git",
